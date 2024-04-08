@@ -1,0 +1,115 @@
+/* CUSTOM COLORS */
+:root {
+    --custom-green: #B7D553;
+    --custom-nonactivelink: #b7d5539c;
+    --custom-lime: #CADE63;
+    --custom-blue: #02C8C9;
+    --custom-blk: black;
+    --custom-none: #ffffff00;
+}
+
+/* CSS OVERRIDES */
+
+/* NAV BAR CONTENTS*/
+.bg-body-tertiary {
+    /* this is the nav bar main box body */
+    background-color: var(--custom-none) !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    /* Avtive Navlink*/
+    color: var(--custom-green) !important;
+}
+
+.nav-link {
+    /* Nav Link (non active)*/
+    color: #b7d5539c;
+}
+
+.navbar-nav {
+    /* Nav Link (non active) hover*/
+    --bs-nav-link-hover-color: var(--custom-blue) !important;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    /* Nav links in desktop will be right aligned on bar */
+    flex-direction: row-reverse;
+}
+
+.navbar-toggler {
+    /* Nav hamburger menu */
+    color: #02C8C9;
+    background-color: transparent;
+    border: var(--bs-border-width) var(--custom-none) !important;
+    ;
+    background: var(--custom-green) !important;
+}
+
+.container-fluid img {
+    /* Nav logo img*/
+    width: 50px;
+    margin-right: 1rem;
+}
+
+/* NAV OVERRIDES ENDS HERE */
+
+.text-success {
+    color: var(--custom-green) !important;
+}
+
+.border-success {
+    border-color: var(--custom-lime) !important;
+}
+
+background-repeat: repeat;
+
+/* CSS OVERRIDE ENDS HERE*/
+
+/* SKIPNAV */
+
+#skipnav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#skipnav a {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    text-decoration: none;
+    z-index: 9999999;     
+    /* I completely forgot about z-index being a thing 
+    but yeah this will change the "layer" it's on so adding this solved
+    the issue of skipnav showing up behind the navbar and being weirldy cut off and stuff.*/
+}
+
+#skipnav a:focus {
+    outline: 5px solid #FFF;
+    top: 0;
+}
+
+/* NOT SURE WHY FOCUS RING COLOR OVERRIDE ISN'T DOING ANYTHING BUT OK */
+
+.bs-focus-ring {
+    color: orange
+        /* IDK the bootstrap site said ".--bs-focus-ring-" */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: url('/portfolio/images/bg-pttrn-test/pttrn-tile.png') repeat top left;
+    height: 100vh;
+    width: 100vw;
+    color: #FFF;
+}
+
+/* Nav bar logo sizing css */
+.container-fluid img { 
+    width: 50px;
+}
